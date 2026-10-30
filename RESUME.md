@@ -1,6 +1,6 @@
 # Niko Bonilla
 
-(856) 263-9228 • ncbonill@hawaii.edu • linkedin.com/in/ncbonilla/ • Honolulu, HI 96817
+ncbonill@hawaii.edu • linkedin.com/in/ncbonilla/ • Honolulu, HI 96817
 
 ## EDUCATION
 
