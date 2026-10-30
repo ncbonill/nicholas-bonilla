@@ -1,1 +1,1 @@
-Documents written BEFORE work begins: scope and hypothesis.
+Sourced inputs, each with its provenance noted.
