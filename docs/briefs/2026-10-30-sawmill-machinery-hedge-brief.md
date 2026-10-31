@@ -15,9 +15,7 @@ We invoiced Finnish lumber mill EUR 6,300,000, due in 182 days (about April 30, 
 ## Three ways to hedge
 Forward. We sell EUR 6.3M for dollars at a rate fixed today. At the indicative 1.1705, that locks in $7.37 million. Pro: complete certainty. Con: we give up the gain if the euro strengthens.
 
-Money-market hedge. We borrow euros today against the coming payment, convert them at spot, and invest the dollars; the customer's payment repays the loan. It is a do-it-yourself forward built from interest rates, locking in about $7.10 million. Pro: certainty without relying on a bank's forward quote. Con: it uses borrowing capacity and has more moving parts.
-
-We borrow euros today, convert them at spot rate and then invest in dollars. The customer would then pay us back the loan with this forward built from interest rates, and then we can lock in ~$7.10 million. Pro: we have certainty and are not dependent on the banks forward. Con: we are using our debt facility and there are more components involved.
+Money-market hedge. We borrow euros today, convert them at spot rate and then invest in dollars. The customer would then pay us back the loan with this forward built from interest rates, and then we can lock in ~$7.10 million. Pro: we have certainty and are not dependent on the banks forward. Con: we are using our debt facility and there are more components involved.
 
 Put option on EUR. We have the option to sell the Euros at a price of 1.118 for a premium of $0.0194 per euro, or $122,220. Pro: a floor under proceeds with upside kept. Con: the premium is spent whether or not we need the protection. Think of it as fire insurance. I am not considering the call option, since it protects a payable, not a receivable.
 
