@@ -9,7 +9,7 @@ hypothesis: I expect the quoted forward (1.1705) to beat a money-market hedge (a
 # Executive Brief: Hedging Our EUR 6.3M Receivable
 To: CFO | From: Niko Bonilla | Date: October 30, 2026
 
-### The exposure
+## The exposure
 We invoiced Finnish lumber mill EUR 6,300,000, due in 182 days (about April 30, 2027). The euro amount is fixed, however, the dollar amount is not. At roughly 1.118, the receivable is worth about $7.04 million.  For every cent that EURUSD falls we lose $63,000. A 5% decline in the euro costs about $352,000. A 10% decline would mean losing around $704,000 which is a big dent in our budget. As the euro falls we lose out but if it goes up we gain.
 
 ## Three ways to hedge
