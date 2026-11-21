@@ -105,3 +105,40 @@ I also learned that placeholder values must be distinguished from verified marke
 - [ ] Final specification checked against assignment requirements.
 
 **Next step:** Complete the revisions in `spec.md` before beginning the Stage 3 workbook build.
+
+## Stage 3 — AI-assisted workbook build
+
+**AI tool:** Claude (Sonnet 5.5)  
+**Date:** 2026-11-20
+
+### Build prompt
+
+I provided the Stage 2 specification and requested an Excel workbook named `model.xlsx` containing the ten named inputs, formula-driven calculations, cover and legend tabs, forward and three-step money-market hedges, put/call option calculations as functions of ending spot, an eleven-scenario sensitivity table and chart, and visible validation checks. I instructed the AI to flag ambiguities and produce an actual `.xlsx` workbook.
+
+### Build record
+
+The workbook was generated as an AI-assisted draft. It follows the Stage 3 build-contract color convention: yellow inputs, blue assumptions, green formulas, and gray outputs. The Stage 2 specification had a conflicting color description; the revised spec draft reconciles this.
+
+### Draft inspection and corrections
+
+Three defects were identified in the initial workbook draft and corrected before saving the current `model.xlsx`:
+
+1. **Forward proceeds formula:** The draft used a fixed expected result. It was changed to `=FC_AMT*F0_in`.
+2. **Put proceeds:** The draft omitted the upfront premium deduction. It was changed to `=FC_AMT*MAX(S_T,K_PUT)-FC_AMT*PREM_PUT`.
+3. **Sensitivity spot grid:** The draft used a literal spot rate. It was changed to use the named input, `=S0_in*(1+shift)`.
+
+### Preliminary automated recalculation
+
+The workbook was recalculated with LibreOffice for a preliminary formula check. The checks returned: forward proceeds $7,374,150; money-market proceeds approximately $7,374,245.59; put floor $7,191,450; parity difference approximately $95.59 (about 0.00130%); EUR borrowing repayment equals €6,300,000; and eleven sensitivity rows. The workbook contained ten named input ranges and no formula-error values in the recalculated file.
+
+These are preliminary AI/tool checks, not a substitute for the student's required Excel inspection.
+
+### Student verification still required
+
+- Open and recalculate the workbook in Excel.
+- Inspect all ten named ranges and their target cells.
+- Verify formulas in calculated cells.
+- Change an input and confirm dependent outputs, sensitivity rows, and chart update.
+- Confirm validation checks and absence of formula errors.
+- Complete the audit note with any additional findings from personal inspection.
+- Commit the final files to GitHub.
