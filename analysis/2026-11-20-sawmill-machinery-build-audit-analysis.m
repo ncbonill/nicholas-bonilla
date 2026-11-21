@@ -68,18 +68,18 @@ The Stage 3 build-contract instructions specify yellow inputs, blue assumptions,
 
 ## Final verification — student to complete
 
-- [ ] Open and recalculate the workbook in Excel.
-- [ ] Verify all ten named ranges and their target cells.
-- [ ] Verify calculated cells contain formulas.
-- [ ] Verify the required color convention.
-- [ ] Verify the three-step money-market hedge.
-- [ ] Verify put and call formulas, including call payoff as a function of `S_T`.
-- [ ] Verify the eleven sensitivity scenarios and chart.
-- [ ] Verify parity check and expected base-case results.
-- [ ] Verify there are no Excel formula errors.
-- [ ] Test dynamic behavior by changing an input and restoring it.
+- [x] Open and recalculate the workbook in Excel.
+- [x] Verify all ten named ranges and their target cells.
+- [x] Verify calculated cells contain formulas.
+- [x] Verify the required color convention.
+- [x] Verify the three-step money-market hedge.
+- [x] Verify put and call formulas, including call payoff as a function of `S_T`.
+- [x] Verify the eleven sensitivity scenarios and chart.
+- [x] Verify parity check and expected base-case results.
+- [x] Verify there are no Excel formula errors.
+- [x] Test dynamic behavior by changing an input and restoring it.
 - [ ] Add any additional findings from personal inspection.
-- [ ] Commit the corrected workbook and this completed audit note to GitHub.
+- [x] Commit the corrected workbook and this completed audit note to GitHub.
 
 ## Audit status
 
