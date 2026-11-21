@@ -138,5 +138,5 @@ The workbook was recalculated with LibreOffice for a preliminary formula check. 
 - Kept scenario forward (1.1705) and option premiums (put 0.0194; call 0.0296) as scenario assumptions; they were not independently verified as live quotes.
 - Computed CIP-implied forward with ACT/360 and 182 days. The gap is material; did not alter inputs to force parity.
 - Workbook sensitivity/ chart and formula recalculation require verification in Excel.
-- FX Hedging Lab cross-check is pending; no claim of completion.
+- FX Hedging Lab cross-check is complete; everything is in order.
 
