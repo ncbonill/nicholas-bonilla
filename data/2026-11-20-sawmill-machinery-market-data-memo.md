@@ -27,7 +27,7 @@
 
 ## Rate-selection rationale
 
-The assignment permits reputable sources and asks for source, timestamp, and proxy logic. The U.S. 1-year Treasury yield and Germany 1-year government yield are transparent sovereign-yield proxies for the USD and EUR rates. They are not directly comparable to matched-term money-market deposit/borrowing rates and do not perfectly match the 182-day transaction horizon. This limitation is disclosed rather than hidden.
+The U.S. 1-year Treasury yield and Germany 1-year government yield are transparent sovereign-yield proxies for the USD and EUR rates. They are not directly comparable to matched-term money-market deposit/borrowing rates and do not perfectly match the 182-day transaction horizon. This limitation is disclosed rather than hidden.
 
 ## CIP calculation and check
 
@@ -60,3 +60,27 @@ The scenario put/call premiums were retained because the Stage 4 instructions sa
 - The workbook remains a draft pending your manual formula/error inspection and Excel recalculation.
 
 ## Honest status / outstanding items
+
+1. Obtain a same-date, same-settlement-date bank forward quote if the instructor expects a live quote; replace `F0_in` only with a verified quote and record source/time.
+2. Compare the workbook against the FX Hedging Lab and document the resolution.
+3. Open in Excel, confirm formulas calculate, chart/sensitivity refresh, and no error cells exist.
+4. Do not claim that the scenario forward or option premiums are live market quotations.
+
+## FX Hedging Lab formula-equivalent cross-check
+
+The published FX Hedging Lab page documents the same forward, three-step money-market, covered-interest-parity, and ±5% sensitivity formulas as the workbook. I independently recalculated those outputs using the populated Stage 4 inputs to compare formula results. I could not directly interact with the Lab's live input controls in this environment, so this is a formula-equivalent cross-check, **not a claim that the Lab UI was entered and observed**.
+
+| Output | Workbook / Lab formula-equivalent result |
+|---|---:|
+| Forward proceeds (`FC_AMT × F0_in`) | $7,374,150.00 |
+| EUR borrowed (`FC_AMT / (1 + R_FC × T/360)`) | €6,206,032.06 |
+| USD converted today | $6,820,429.23 |
+| USD invested / money-market proceeds | $6,975,938.80 |
+| CIP-implied forward | 1.107291874 USD/EUR |
+| Put net floor (`FC_AMT × K_PUT − FC_AMT × PREM_PUT`) | $6,801,480.00 |
+| Call net payoff at base spot | -$186,480.00 |
+| MM less forward | -$398,211.20 |
+
+The calculations reconcile to the workbook formulas. The parity check remains a FAIL: the retained scenario forward (1.1705) differs materially from the CIP-implied forward (1.107292). No inputs were changed to force a pass.
+
+The 11 sensitivity spots are 1.04405 through 1.15395 USD/EUR in 1% steps around 1.0990. Forward and money-market proceeds remain flat; unhedged proceeds rise with spot; the EUR put remains at its net floor below strike and participates above strike after premium.
