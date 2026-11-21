@@ -131,14 +131,12 @@ Three defects were identified in the initial workbook draft and corrected before
 
 The workbook was recalculated with LibreOffice for a preliminary formula check. The checks returned: forward proceeds $7,374,150; money-market proceeds approximately $7,374,245.59; put floor $7,191,450; parity difference approximately $95.59 (about 0.00130%); EUR borrowing repayment equals €6,300,000; and eleven sensitivity rows. The workbook contained ten named input ranges and no formula-error values in the recalculated file.
 
-These are preliminary AI/tool checks, not a substitute for the student's required Excel inspection.
+## Stage 4 market-data retrieval and population (2026-11-20)
 
-### Student verification still required
+- Retrieved the ECB EUR/USD reference rate for 2026-11-20 (1.0990) and selected 1-year government-yield proxies for USD (U.S. Treasury, 4.51%) and EUR (Germany, 2.995%).
+- Recorded source URLs and dates in the market-data memo and workbook Inputs tab.
+- Kept scenario forward (1.1705) and option premiums (put 0.0194; call 0.0296) as scenario assumptions; they were not independently verified as live quotes.
+- Computed CIP-implied forward with ACT/360 and 182 days. The gap is material; did not alter inputs to force parity.
+- Workbook sensitivity/ chart and formula recalculation require verification in Excel.
+- FX Hedging Lab cross-check is pending; no claim of completion.
 
-- Open and recalculate the workbook in Excel.
-- Inspect all ten named ranges and their target cells.
-- Verify formulas in calculated cells.
-- Change an input and confirm dependent outputs, sensitivity rows, and chart update.
-- Confirm validation checks and absence of formula errors.
-- Complete the audit note with any additional findings from personal inspection.
-- Commit the final files to GitHub.
